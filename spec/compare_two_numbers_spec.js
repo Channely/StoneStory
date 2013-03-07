@@ -17,4 +17,7 @@ describe("Get_similar_rate_of",function(){
     it('two numbers,half of them are different,half of them are similar 1234 5643,get 0A2B',function(){
         expect(compare_num('1234','5643')).toBe('0A2B');
     });
+    it('two numbers,one forth of them are different,one forth of them are same,half of them are similar 1234 1943,get 1A2B',function(){
+        expect(compare_num('1234','1943')).toBe('1A2B');
+    });
 });
