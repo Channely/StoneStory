@@ -10,5 +10,8 @@ describe("Get_similar_rate_of",function(){
     });
     it('two numbers,half of them are same,half of them are diferent 1234 1278,get 2A0B',function(){
         expect(compare_num('1234','1278')).toBe('2A0B');
+    });
+    it('two numbers,half of them are same,half of them are similar 1234 1243,get 2A2B',function(){
+        expect(compare_num('1234','1243')).toBe('2A2B');
     })
 });
