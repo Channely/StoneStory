@@ -7,5 +7,8 @@ describe("Get_similar_rate_of",function(){
     });
     it('two similar numbers 1234 4321',function(){
         expect(compare_num('1234','4321')).toBe('0A4B');
+    });
+    it('two numbers,half of them are same,half of them are diferent 1234 1278',function(){
+        expect(compare_num('1234','1278')).toBe('2A0B');
     })
 });
