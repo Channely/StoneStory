@@ -15,11 +15,14 @@ function compare_num(num1,num2){
                 }
             }
         }
-        if(different_counts_of_num1_and_num2==16){
+        if(different_counts_of_num1_and_num2==16&&similar_counts_of_num1_and_num2==0){
             return "0A0B";
         }
         if(different_counts_of_num1_and_num2==12&&similar_counts_of_num1_and_num2==4){
             return "0A4B";
+        }
+        if(different_counts_of_num1_and_num2==14&&similar_counts_of_num1_and_num2==2){
+            return '2A0B';
         }
     }
 }
