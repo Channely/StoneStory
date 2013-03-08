@@ -1,28 +1,32 @@
 describe('lay out a random number',function(){
     it('it should be with four digits in it',function(){
-        expect(a_random_num().length).toEqual(4);
+        expect(random_a_num().length).toEqual(4);
     });
     it('it should be a random number',function(){
-        var random_num1=a_random_num();
-        var random_num2=a_random_num();
+        var random_num1=random_a_num();
+        var random_num2=random_a_num();
         expect(random_num1==random_num2).toBeFalsy();
     });
     it('it shouldn not have two same numbers within it',function(){
-        var test_1000_times=0;
+        var total_exptected_number_count=0;
         for(k=0;k<1000;k++){
-            var random_num3=a_random_num();
-            var same_counter=0;
-            for(i=0;i<4;i++){
-                for(j=0;j<4;j++){
-                    if(random_num3.charAt(i)==random_num3.charAt(j)){
-                        same_counter++;
-                    }
-                }
-            }
-            if(same_counter==4){
-                test_1000_times++;
+            var random_num=random_a_num();
+            if(is_four_digit_different(random_num)) {
+               total_exptected_number_count++;
             }
         }
-        expect(test_1000_times).toEqual(1000);
-    })
-})
+        expect(total_exptected_number_count).toEqual(1000);
+    });
+
+    function is_four_digit_different(number) {
+        var same_counter=0;
+        for(i=0;i<4;i++){
+            for(j=0;j<4;j++){
+                if(number.charAt(i)==number.charAt(j)){
+                    same_counter++;
+                }
+            }
+        }
+        return same_counter==4;
+    }
+});
