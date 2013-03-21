@@ -13,11 +13,15 @@
   <script type="text/javascript" src="src/Player.js"></script>
   <script type="text/javascript" src="src/Song.js"></script>
   <script type="text/javascript" src="src/random_number_of_four_digits.js"></script>
+  <script type="text/javascript" src="src/compare_two_numbers.js"></script>
+  <script type="text/javascript" src="src/guess_num_base_on_similar_rate.js"></script>
 
   <!-- include spec files here... -->
   <script type="text/javascript" src="spec/SpecHelper.js"></script>
   <script type="text/javascript" src="spec/PlayerSpec.js"></script>
   <script type="text/javascript" src="spec/random_number_of_four_digits_spec.js"></script>
+  <script type="text/javascript" src="spec/compare_two_numbers_spec.js"></script>
+  <script type="text/javascript" src="spec/guess_num_base_on_similar_rate_spec.js"></script>
 
   <script type="text/javascript">
     (function() {
@@ -50,6 +54,12 @@
 
 </head>
 
-<body>
+<body align="center">
+  <br><h3>Guess Numbers</h3></br>
+  <br><input id='display'>Display Result</input></br>
+  <br><input id='num_input'>input a four digits number</input></br>
+  <br><button onclick="start_this_game()">Begin</button>
+  <button onclick="guess_it()">Compute</button></br>
+
 </body>
 </html>
